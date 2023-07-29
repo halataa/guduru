@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cq8yj1pd7ubp4"]
+
+[ext_resource type="Script" path="res://scenes/templates/object_template.gd" id="1_0uve0"]
+[ext_resource type="Resource" uid="uid://ddc2s6exc1eqk" path="res://resources/انگور.tres" id="2_gqh8x"]
+[ext_resource type="Texture2D" uid="uid://qd0ewxearu84" path="res://graphics/border.png" id="3_ev8us"]
+
+[node name="object_template" type="Area2D"]
+position = Vector2(416, 553)
+collision_layer = 6
+collision_mask = 7
+script = ExtResource("1_0uve0")
+meta = ExtResource("2_gqh8x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 3)
+
+[node name="Border" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_ev8us")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

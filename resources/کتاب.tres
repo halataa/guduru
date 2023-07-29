@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="enemy_object_resource" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/object_resource.gd" id="1_nbn4e"]
+[ext_resource type="Texture2D" path="res://graphics/new_objects/کتاب.png" id="2_fvf04"]
+
+[resource]
+script = ExtResource("1_nbn4e")
+texture = ExtResource("2_fvf04")
+name = "کتاب"
+letters = Array[int]([1705, 1578, 1575, 1576])

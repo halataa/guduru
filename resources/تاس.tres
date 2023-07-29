@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="enemy_object_resource" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/object_resource.gd" id="1_htku2"]
+[ext_resource type="Texture2D" path="res://graphics/new_objects/تاس.png" id="2_867gs"]
+
+[resource]
+script = ExtResource("1_htku2")
+texture = ExtResource("2_867gs")
+name = "تاس"
+letters = Array[int]([1578, 1575, 1587])

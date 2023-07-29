@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scenes/templates/alphabet_template.gd" id="1_n3oxy"]
+[ext_resource type="Texture2D" path="res://graphics/alphabet/ژ.png" id="2_0253l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dmi2l"]
+size = Vector2(96, 96)
+
+[node name="Alphabet" type="CharacterBody2D"]
+script = ExtResource("1_n3oxy")
+offset = 100
+default_v_y = 100
+fast_v_y = 500
+ord_num = 1688
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dmi2l")
+
+[node name="Image" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_0253l")

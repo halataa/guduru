@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbrn45xbwtt5y"]
+
+[ext_resource type="Script" path="res://scenes/templates/alphabet_template.gd" id="1_ogtw3"]
+
+[node name="Alphabet" type="CharacterBody2D"]
+script = ExtResource("1_ogtw3")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+
+[node name="Image" type="Sprite2D" parent="."]
+texture_filter = 1

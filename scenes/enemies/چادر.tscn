@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scenes/templates/object_template.gd" id="1_pf8jp"]
+[ext_resource type="Script" path="res://scripts/object_resource.gd" id="2_pknsu"]
+[ext_resource type="Texture2D" path="res://graphics/new_objects/چادر.png" id="3_0xwya"]
+[ext_resource type="Texture2D" path="res://graphics/border.png" id="4_kublp"]
+
+[sub_resource type="Resource" id="Resource_o8ly4"]
+script = ExtResource("2_pknsu")
+texture = ExtResource("3_0xwya")
+name = "چادر"
+letters = Array[int]([1670, 1575, 1583, 1585])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uyoxq"]
+size = Vector2(96, 96)
+
+[node name="object_template" type="Area2D"]
+position = Vector2(416, 553)
+collision_layer = 6
+collision_mask = 7
+script = ExtResource("1_pf8jp")
+meta = SubResource("Resource_o8ly4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+shape = SubResource("RectangleShape2D_uyoxq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 3)
+scale = Vector2(3, 3)
+texture = ExtResource("3_0xwya")
+
+[node name="Border" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_kublp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered" flags=18]

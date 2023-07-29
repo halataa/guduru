@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scenes/templates/object_template.gd" id="1_7qdo0"]
+[ext_resource type="Script" path="res://scripts/object_resource.gd" id="2_mqw76"]
+[ext_resource type="Texture2D" path="res://graphics/new_objects/هویج.png" id="3_fmoh3"]
+[ext_resource type="Texture2D" path="res://graphics/border.png" id="4_r1kvh"]
+
+[sub_resource type="Resource" id="Resource_yhycq"]
+script = ExtResource("2_mqw76")
+texture = ExtResource("3_fmoh3")
+name = "هویج"
+letters = Array[int]([1607, 1608, 1740, 1580])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfsyx"]
+size = Vector2(96, 96)
+
+[node name="object_template" type="Area2D"]
+position = Vector2(416, 553)
+collision_layer = 6
+collision_mask = 7
+script = ExtResource("1_7qdo0")
+meta = SubResource("Resource_yhycq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+shape = SubResource("RectangleShape2D_dfsyx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 3)
+scale = Vector2(3, 3)
+texture = ExtResource("3_fmoh3")
+
+[node name="Border" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_r1kvh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered" flags=18]
