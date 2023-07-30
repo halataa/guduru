@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://h828xcuwhsx7"
-path="res://.godot/imported/تبر.png-cc3f49c6a60afbe3bb2b73d3b5ff7553.ctex"
+path="res://.godot/imported/تبر.png-8d5d6c6d2e319c32392347ed90248845.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/objects/تبر.png"
-dest_files=["res://.godot/imported/تبر.png-cc3f49c6a60afbe3bb2b73d3b5ff7553.ctex"]
+source_file="res://graphics/new_objects/تبر.png"
+dest_files=["res://.godot/imported/تبر.png-8d5d6c6d2e319c32392347ed90248845.ctex"]
 
 [params]
 

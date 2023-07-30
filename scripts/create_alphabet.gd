@@ -28,6 +28,10 @@ func _ready():
 		var a = stemplate.instantiate()
 		var png = load(png_path+p)
 		var sprite = a.find_child('Image')
+		var border = a.find_child('Border')
+		border.texture = png
+		border.scale = Vector2(0.85,0.85)
+		border.visible = false
 		sprite.texture = png
 		sprite.scale = Vector2(0.75,0.75)
 		a.find_child('Collision').shape = rect

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7j4aw01ho377"
-path="res://.godot/imported/چوب.png-1f8aeb8cdb8fe8daf885c7dca1fe0d65.ctex"
+path="res://.godot/imported/چوب.png-130e74be7c603f142a2b55c7031cb9d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/objects/چوب.png"
-dest_files=["res://.godot/imported/چوب.png-1f8aeb8cdb8fe8daf885c7dca1fe0d65.ctex"]
+source_file="res://graphics/new_objects/چوب.png"
+dest_files=["res://.godot/imported/چوب.png-130e74be7c603f142a2b55c7031cb9d0.ctex"]
 
 [params]
 

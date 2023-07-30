@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd0cte5djmvy1"
-path="res://.godot/imported/چادر.png-9928f73c53e569de92e023b5eaccd4c5.ctex"
+uid="uid://ch53sq6c51rt"
+path="res://.godot/imported/white.png-66c959ce62303b3c630f04ed0327137e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/new_objects/چادر.png"
-dest_files=["res://.godot/imported/چادر.png-9928f73c53e569de92e023b5eaccd4c5.ctex"]
+source_file="res://graphics/white.png"
+dest_files=["res://.godot/imported/white.png-66c959ce62303b3c630f04ed0327137e.ctex"]
 
 [params]
 

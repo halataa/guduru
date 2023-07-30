@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csxnwpuwk0tlu"
-path="res://.godot/imported/بادمجان.png-73c9708be902c919da4c28d26860d8b9.ctex"
+path="res://.godot/imported/بادمجان.png-dec6abc56f50c7a24d14f4c75138c453.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/objects/بادمجان.png"
-dest_files=["res://.godot/imported/بادمجان.png-73c9708be902c919da4c28d26860d8b9.ctex"]
+source_file="res://graphics/new_objects/بادمجان.png"
+dest_files=["res://.godot/imported/بادمجان.png-dec6abc56f50c7a24d14f4c75138c453.ctex"]
 
 [params]
 

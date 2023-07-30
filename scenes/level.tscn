@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://qm5ypjmka0mn"]
+[gd_scene load_steps=6 format=3 uid="uid://qm5ypjmka0mn"]
 
 [ext_resource type="Script" path="res://scenes/level.gd" id="1_0fp5q"]
+[ext_resource type="Texture2D" uid="uid://ch53sq6c51rt" path="res://graphics/white.png" id="2_8a0ei"]
 [ext_resource type="PackedScene" uid="uid://buqvkbl78bj0t" path="res://scenes/ui/ui.tscn" id="2_ir7t0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fdakj"]
@@ -11,7 +12,14 @@ size = Vector2(593, 20)
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_0fp5q")
+rand_limit_contain = 0.5
 metadata/_edit_vertical_guides_ = [100.0, 200.0, 300.0, 400.0]
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.101961, 0.101961, 0.101961, 1)
+rotation = 3.14159
+scale = Vector2(4.13254, -8.40497)
+texture = ExtResource("2_8a0ei")
 
 [node name="Alphabet" type="Node2D" parent="."]
 

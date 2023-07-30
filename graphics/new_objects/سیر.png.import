@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqkga2ap8gkg3"
-path="res://.godot/imported/سیر.png-2835211d1d2100e3fc27cbf5c81bf57e.ctex"
+path="res://.godot/imported/سیر.png-63c94ec0b6f3a94362b49f64171e7249.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/objects/سیر.png"
-dest_files=["res://.godot/imported/سیر.png-2835211d1d2100e3fc27cbf5c81bf57e.ctex"]
+source_file="res://graphics/new_objects/سیر.png"
+dest_files=["res://.godot/imported/سیر.png-63c94ec0b6f3a94362b49f64171e7249.ctex"]
 
 [params]
 

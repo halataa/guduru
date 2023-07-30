@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8oow7xd7wp00"
-path="res://.godot/imported/انگور.png-78e50ab7aaf1ea288d22c7d305fa4d4a.ctex"
+path="res://.godot/imported/انگور.png-81a9856f219980d9507bc7f234af06df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/objects/انگور.png"
-dest_files=["res://.godot/imported/انگور.png-78e50ab7aaf1ea288d22c7d305fa4d4a.ctex"]
+source_file="res://graphics/new_objects/انگور.png"
+dest_files=["res://.godot/imported/انگور.png-81a9856f219980d9507bc7f234af06df.ctex"]
 
 [params]
 

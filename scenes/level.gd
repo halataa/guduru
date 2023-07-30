@@ -6,6 +6,8 @@ var enemy_scene_path = "res://scenes/enemies/"
 var ascenes = dir_contents(alphabet_scene_path)
 var escenes = dir_contents(enemy_scene_path)
 
+@export var rand_limit_contain:float = 0.8
+
 func dir_contents(path):
 	var pngs = []
 	var dir = DirAccess.open(path)
@@ -49,7 +51,19 @@ func add_random_alphabet(enemies:Array=[]):
 		choice = ascenes.pick_random()
 	var spawn = $AlphabetSpawnLocations.get_children().pick_random()
 	var a = load(alphabet_scene_path+choice).instantiate()
+	var rand : float = rand_limit_contain
+	rand = randf()
+	var color:Color
+	if rand > rand_limit_contain:
+		a.is_contain = false
+		color = Color(1,0,0)
+	else:
+		a.is_contain = true
+		color = Color("#1bd165")
 	a.position = spawn.global_position
+	var border = a.find_child('Border')
+	border.visible = true
+	border.modulate = color
 	$Alphabet.add_child.call_deferred(a)
 
 
@@ -132,6 +146,6 @@ func _on_end_of_screen_body_entered(body):
 
 
 
-func _on_game_over_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+func _on_game_over_area_shape_entered(_area_rid, _area, _area_shape_index, _local_shape_index):
 	print('GAMEOVER')
 	

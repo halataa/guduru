@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwkfoj8qlojyi"
-path="res://.godot/imported/سیب.png-72323f5de75c24932b861bffeaa55afe.ctex"
+path="res://.godot/imported/سیب.png-0aa72e71b51cf8187c8039c9279bb17c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/objects/سیب.png"
-dest_files=["res://.godot/imported/سیب.png-72323f5de75c24932b861bffeaa55afe.ctex"]
+source_file="res://graphics/new_objects/سیب.png"
+dest_files=["res://.godot/imported/سیب.png-0aa72e71b51cf8187c8039c9279bb17c.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cy2yqyo661qvx"
-path="res://.godot/imported/الماس.png-b2125abe12df26d4146ffd375fb446df.ctex"
+path="res://.godot/imported/الماس.png-707e28fa5f655c868bfdd0fab3690463.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/objects/الماس.png"
-dest_files=["res://.godot/imported/الماس.png-b2125abe12df26d4146ffd375fb446df.ctex"]
+source_file="res://graphics/new_objects/الماس.png"
+dest_files=["res://.godot/imported/الماس.png-707e28fa5f655c868bfdd0fab3690463.ctex"]
 
 [params]
 

@@ -1,22 +1,29 @@
 [gd_scene load_steps=4 format=3]
 
-[ext_resource type="Script" path="res://scenes/templates/alphabet_template.gd" id="1_rcmkq"]
-[ext_resource type="Texture2D" path="res://graphics/alphabet/ن.png" id="2_o4sgv"]
+[ext_resource type="Script" path="res://scenes/templates/alphabet_template.gd" id="1_g23mk"]
+[ext_resource type="Texture2D" path="res://graphics/alphabet/ن.png" id="2_2lms0"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dmi2l"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmlyq"]
 size = Vector2(96, 96)
 
 [node name="Alphabet" type="CharacterBody2D"]
-script = ExtResource("1_rcmkq")
+script = ExtResource("1_g23mk")
 offset = 100
 default_v_y = 100
 fast_v_y = 500
+is_contain = true
 ord_num = 1606
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_dmi2l")
+shape = SubResource("RectangleShape2D_wmlyq")
+
+[node name="Border" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("2_2lms0")
 
 [node name="Image" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("2_o4sgv")
+texture = ExtResource("2_2lms0")

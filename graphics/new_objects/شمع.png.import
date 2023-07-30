@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ca6p25w13mgkj"
-path="res://.godot/imported/شمع.png-90491c1ec4e3dd7f16538af211f6adf1.ctex"
+path="res://.godot/imported/شمع.png-de7168231d17ff2f6d5aa69457bdea61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/objects/شمع.png"
-dest_files=["res://.godot/imported/شمع.png-90491c1ec4e3dd7f16538af211f6adf1.ctex"]
+source_file="res://graphics/new_objects/شمع.png"
+dest_files=["res://.godot/imported/شمع.png-de7168231d17ff2f6d5aa69457bdea61.ctex"]
 
 [params]
 

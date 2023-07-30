@@ -1,38 +1,38 @@
 [gd_scene load_steps=7 format=3]
 
-[ext_resource type="Script" path="res://scenes/templates/object_template.gd" id="1_4tj7t"]
-[ext_resource type="Script" path="res://scripts/object_resource.gd" id="2_ydt1x"]
-[ext_resource type="Texture2D" path="res://graphics/new_objects/گوجه.png" id="3_8c47i"]
-[ext_resource type="Texture2D" path="res://graphics/border.png" id="4_6la2a"]
+[ext_resource type="Script" path="res://scenes/templates/object_template.gd" id="1_8bcg5"]
+[ext_resource type="Script" path="res://scripts/object_resource.gd" id="2_wxeuf"]
+[ext_resource type="Texture2D" path="res://graphics/new_objects/گوجه.png" id="3_glikq"]
+[ext_resource type="Texture2D" path="res://graphics/border.png" id="4_in2ul"]
 
-[sub_resource type="Resource" id="Resource_02pc6"]
-script = ExtResource("2_ydt1x")
-texture = ExtResource("3_8c47i")
+[sub_resource type="Resource" id="Resource_s2xhe"]
+script = ExtResource("2_wxeuf")
+texture = ExtResource("3_glikq")
 name = "گوجه"
 letters = Array[int]([1711, 1608, 1580, 1607])
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wfo1e"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8uny"]
 size = Vector2(96, 96)
 
 [node name="object_template" type="Area2D"]
 position = Vector2(416, 553)
 collision_layer = 6
 collision_mask = 7
-script = ExtResource("1_4tj7t")
-meta = SubResource("Resource_02pc6")
+script = ExtResource("1_8bcg5")
+meta = SubResource("Resource_s2xhe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1
-shape = SubResource("RectangleShape2D_wfo1e")
+shape = SubResource("RectangleShape2D_h8uny")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, 3)
 scale = Vector2(3, 3)
-texture = ExtResource("3_8c47i")
+texture = ExtResource("3_glikq")
 
 [node name="Border" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("4_6la2a")
+texture = ExtResource("4_in2ul")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered" flags=18]

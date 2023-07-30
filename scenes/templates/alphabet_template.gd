@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var offset: int = 100
 @export var default_v_y = 100
 @export var fast_v_y = 500
-
+@export var is_contain:bool = true
 
 var window_size = DisplayServer.window_get_size()
 @export var ord_num : int = 0

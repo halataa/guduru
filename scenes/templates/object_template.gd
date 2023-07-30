@@ -22,11 +22,17 @@ func get_ready():
 
 
 func _on_body_entered(body):
-	if body.ord_num in meta.letters:
-		Util.right_move.emit()
-		queue_free()
+	if body.is_contain:
+		if body.ord_num in meta.letters:
+			Util.right_move.emit()
+			queue_free()
+		else:
+			Util.wrong_move.emit(position)
 	else:
-		Util.wrong_move.emit(position)
+		if body.ord_num not in meta.letters:
+			Util.right_move.emit()
+			queue_free()
+		else:
+			Util.wrong_move.emit(position)
 	body.queue_free()
-	
 

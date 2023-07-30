@@ -7,5 +7,9 @@ script = ExtResource("1_ogtw3")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 
+[node name="Border" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.1, 1.1)
+
 [node name="Image" type="Sprite2D" parent="."]
 texture_filter = 1

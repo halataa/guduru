@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cur5k8xoag7mu"
-path="res://.godot/imported/هویج.png-274b59876d7505cd2e7ebcba3d0c139d.ctex"
+path="res://.godot/imported/هویج.png-04a33d0eb0de07f5ee11da09ed0b9308.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/objects/هویج.png"
-dest_files=["res://.godot/imported/هویج.png-274b59876d7505cd2e7ebcba3d0c139d.ctex"]
+source_file="res://graphics/new_objects/هویج.png"
+dest_files=["res://.godot/imported/هویج.png-04a33d0eb0de07f5ee11da09ed0b9308.ctex"]
 
 [params]
 
