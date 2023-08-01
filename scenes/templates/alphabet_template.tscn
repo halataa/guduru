@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bbrn45xbwtt5y"]
+[gd_scene load_steps=3 format=3 uid="uid://bbrn45xbwtt5y"]
 
 [ext_resource type="Script" path="res://scenes/templates/alphabet_template.gd" id="1_ogtw3"]
+[ext_resource type="PackedScene" uid="uid://cgx7m5kpf0vyo" path="res://scenes/touch.tscn" id="2_f1tnt"]
 
 [node name="Alphabet" type="CharacterBody2D"]
 script = ExtResource("1_ogtw3")
@@ -13,3 +14,7 @@ scale = Vector2(1.1, 1.1)
 
 [node name="Image" type="Sprite2D" parent="."]
 texture_filter = 1
+
+[node name="Touch" parent="." instance=ExtResource("2_f1tnt")]
+
+[connection signal="swiped" from="Touch" to="." method="_on_touch_swiped"]

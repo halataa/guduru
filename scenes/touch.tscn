@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" path="res://scenes/touch.gd" id="1_hspov"]
 
-[node name="Node" type="Node"]
+[node name="Touch" type="Node"]
 script = ExtResource("1_hspov")
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.15
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

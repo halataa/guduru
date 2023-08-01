@@ -15,9 +15,7 @@ func _process(delta):
 		direction = 1
 	elif Input.is_action_just_pressed("left"):
 		direction = -1
-	var new_position_x = position.x + direction * offset
-	if new_position_x > 0 and new_position_x < window_size.x:
-		position.x = new_position_x
+	move_alphabet(direction)
 	if Input.is_action_pressed("fast"):
 		velocity.y = fast_v_y * delta
 	else:
@@ -26,3 +24,13 @@ func _process(delta):
 	move_and_collide(velocity)
 		
 
+func move_alphabet(direction):
+	var new_position_x = position.x + direction * offset
+	if new_position_x > 0 and new_position_x < window_size.x:
+		position.x = new_position_x
+
+func _on_touch_swiped(direction):
+	if direction == Vector2.RIGHT:
+		move_alphabet(direction)
+	elif direction == Vector2.LEFT:
+		move_alphabet(direction)
