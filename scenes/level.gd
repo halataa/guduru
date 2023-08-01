@@ -122,6 +122,7 @@ func sort_y(a,b):
 
 
 func _on_alphabet_child_exiting_tree(_node):
+	Input.action_release("fast")
 	var enemies = get_4_enemies()
 	add_random_alphabet(enemies)
 

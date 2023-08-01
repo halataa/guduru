@@ -30,7 +30,8 @@ func move_alphabet(direction):
 		position.x = new_position_x
 
 func _on_touch_swiped(direction):
-	if direction == Vector2.RIGHT:
-		move_alphabet(direction)
-	elif direction == Vector2.LEFT:
-		move_alphabet(direction)
+	move_alphabet(direction.x)
+	if direction == Vector2.DOWN:
+		Input.action_press('fast')
+	
+
