@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://qm5ypjmka0mn"]
+[gd_scene load_steps=7 format=3 uid="uid://qm5ypjmka0mn"]
 
 [ext_resource type="Script" path="res://scenes/level.gd" id="1_0fp5q"]
 [ext_resource type="Texture2D" uid="uid://ch53sq6c51rt" path="res://graphics/white.png" id="2_8a0ei"]
 [ext_resource type="PackedScene" uid="uid://buqvkbl78bj0t" path="res://scenes/ui/ui.tscn" id="2_ir7t0"]
+[ext_resource type="PackedScene" uid="uid://cds5gfren3o1o" path="res://scenes/ui/gameover.tscn" id="4_2hcnw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fdakj"]
 size = Vector2(536, 99)
@@ -11,6 +12,7 @@ size = Vector2(536, 99)
 size = Vector2(593, 20)
 
 [node name="Level" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_0fp5q")
 rand_limit_contain = 0.5
 metadata/_edit_vertical_guides_ = [100.0, 200.0, 300.0, 400.0]
@@ -75,6 +77,8 @@ position = Vector2(259.5, 249)
 shape = SubResource("RectangleShape2D_h8m2h")
 
 [node name="UI" parent="." instance=ExtResource("2_ir7t0")]
+
+[node name="Gameover" parent="." instance=ExtResource("4_2hcnw")]
 
 [connection signal="child_exiting_tree" from="Alphabet" to="." method="_on_alphabet_child_exiting_tree"]
 [connection signal="timeout" from="EnemyCooldown" to="." method="_on_enemy_cooldown_timeout"]

@@ -5,7 +5,7 @@ var alphabet_scene_path = "res://scenes/alphabet/"
 var enemy_scene_path = "res://scenes/enemies/"
 var ascenes = dir_contents(alphabet_scene_path)
 var escenes = dir_contents(enemy_scene_path)
-
+var gameover = preload("res://scenes/ui/gameover.tscn")
 @export var rand_limit_contain:float = 0.8
 
 func dir_contents(path):
@@ -25,6 +25,7 @@ func dir_contents(path):
 	return pngs
 
 func _ready():
+	$Gameover.visible = false
 	$UI.update_score()
 	Util.right_move.connect(_on_right_move)
 	Util.wrong_move.connect(_on_wrong_move)
@@ -148,5 +149,5 @@ func _on_end_of_screen_body_entered(body):
 
 
 func _on_game_over_area_shape_entered(_area_rid, _area, _area_shape_index, _local_shape_index):
-	print('GAMEOVER')
+	$Gameover.show()
 	

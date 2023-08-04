@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://cds5gfren3o1o"]
+
+[ext_resource type="FontFile" uid="uid://ch8btagj4yg4d" path="res://graphics/AnjomanMaxFN-Regular.ttf" id="1_ne2t4"]
+[ext_resource type="Script" path="res://scenes/ui/gameover.gd" id="1_ydfdo"]
+[ext_resource type="Theme" uid="uid://df0dr82dh58uu" path="res://scenes/ui/theme.tres" id="3_uje72"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wbtdo"]
+font = ExtResource("1_ne2t4")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+outline_size = 3
+outline_color = Color(1, 0, 0, 1)
+shadow_size = 0
+
+[node name="Gameover" type="CanvasLayer"]
+script = ExtResource("1_ydfdo")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.752941, 0.701961, 0.52549, 1)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_top = 0.38
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -3.05176e-05
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "بازی تمومه"
+label_settings = SubResource("LabelSettings_wbtdo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.386
+anchor_top = 0.545
+anchor_right = 0.618
+anchor_bottom = 0.59625
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_uje72")
+text = "شروع مجدد"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
