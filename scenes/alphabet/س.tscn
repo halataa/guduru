@@ -1,15 +1,15 @@
 [gd_scene load_steps=6 format=3]
 
-[ext_resource type="Script" path="res://scenes/templates/alphabet_template.gd" id="1_l8wau"]
-[ext_resource type="Texture2D" path="res://graphics/alphabet/س.png" id="2_ilnw6"]
-[ext_resource type="PackedScene" path="res://scenes/touch.tscn" id="3_1ph16"]
-[ext_resource type="Script" path="res://scenes/touch.gd" id="4_xk1fn"]
+[ext_resource type="Script" path="res://scenes/templates/alphabet_template.gd" id="1_7giyf"]
+[ext_resource type="Texture2D" path="res://graphics/alphabet/س.png" id="2_djy6t"]
+[ext_resource type="PackedScene" path="res://scenes/touch.tscn" id="3_04owf"]
+[ext_resource type="Script" path="res://scenes/touch.gd" id="4_0et0i"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ti3y"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s2uxe"]
 size = Vector2(96, 96)
 
 [node name="Alphabet" type="CharacterBody2D"]
-script = ExtResource("1_l8wau")
+script = ExtResource("1_7giyf")
 offset = 100
 default_v_y = 100
 fast_v_y = 500
@@ -17,21 +17,34 @@ is_contain = true
 ord_num = 1587
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_8ti3y")
+shape = SubResource("RectangleShape2D_s2uxe")
 
 [node name="Border" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
 scale = Vector2(0.85, 0.85)
-texture = ExtResource("2_ilnw6")
+texture = ExtResource("2_djy6t")
 
 [node name="Image" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("2_ilnw6")
+texture = ExtResource("2_djy6t")
 
-[node name="Touch" type="Node" parent="." instance=ExtResource("3_1ph16")]
-script = ExtResource("4_xk1fn")
+[node name="Touch" type="Node" parent="." instance=ExtResource("3_04owf")]
+script = ExtResource("4_0et0i")
 MAX_DIAGONAL_SLOPE = 1.3
+
+[node name="DownRay" type="RayCast2D" parent="."]
+collide_with_areas = true
+
+[node name="LeftRay" type="RayCast2D" parent="."]
+target_position = Vector2(-100, 0)
+collision_mask = 15
+collide_with_areas = true
+
+[node name="RightRay" type="RayCast2D" parent="."]
+target_position = Vector2(100, 0)
+collision_mask = 15
+collide_with_areas = true
 
 [connection signal="swiped" from="Touch" to="." method="_on_touch_swiped" flags=18]

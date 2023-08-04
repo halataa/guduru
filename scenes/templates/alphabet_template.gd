@@ -15,7 +15,8 @@ func _process(delta):
 		direction = 1
 	elif Input.is_action_just_pressed("left"):
 		direction = -1
-	move_alphabet(direction)
+	if !$LeftRay.is_colliding() and !$RightRay.is_colliding():
+		move_alphabet(direction)
 	if Input.is_action_pressed("fast"):
 		velocity.y = fast_v_y * delta
 	else:
