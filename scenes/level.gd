@@ -1,11 +1,11 @@
 extends Node2D
 
 
-var alphabet_scene_path = "res://scenes/alphabet/"
-var enemy_scene_path = "res://scenes/enemies/"
-var ascenes = dir_contents(alphabet_scene_path)
-var escenes = dir_contents(enemy_scene_path)
-var gameover = preload("res://scenes/ui/gameover.tscn")
+@onready var alphabet_scene_path = "res://scenes/alphabet/"
+@onready var enemy_scene_path = "res://scenes/enemies/"
+@onready var ascenes = dir_contents(alphabet_scene_path)
+@onready var escenes = dir_contents(enemy_scene_path)
+@onready var gameover = preload("res://scenes/ui/gameover.tscn")
 @export var rand_limit_contain:float = 0.8
 
 func dir_contents(path):
@@ -17,7 +17,9 @@ func dir_contents(path):
 		while file_name != "":
 			if dir.current_is_dir():
 				pass
-			elif file_name.ends_with('.tscn'):
+			elif file_name.contains('.tscn'):
+				if file_name.ends_with('.remap'):
+					file_name = file_name.trim_suffix('.remap')
 				pngs.append(file_name)
 			file_name = dir.get_next()
 	else:
