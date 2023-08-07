@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cf7dnddq6bm5q"
-path="res://.godot/imported/فلفل.png-c0cfbdc7cc2cdf3a7dc044da0548509e.ctex"
+path="res://.godot/imported/فلفل.png-32b32fc51d2ca13eca83f797b27523fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/new_objects/فلفل.png"
-dest_files=["res://.godot/imported/فلفل.png-c0cfbdc7cc2cdf3a7dc044da0548509e.ctex"]
+source_file="res://graphics/objects/فلفل.png"
+dest_files=["res://.godot/imported/فلفل.png-32b32fc51d2ca13eca83f797b27523fe.ctex"]
 
 [params]
 

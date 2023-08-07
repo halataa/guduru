@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="enemy_object_resource" load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://scripts/object_resource.gd" id="1_a5hpm"]
-[ext_resource type="Texture2D" path="res://graphics/new_objects/هویج.png" id="2_mksxp"]
+[ext_resource type="Script" path="res://scripts/object_resource.gd" id="1_vywtc"]
+[ext_resource type="Texture2D" path="res://graphics/new_objects/هویج.png" id="2_ujw5j"]
 
 [resource]
-script = ExtResource("1_a5hpm")
-texture = ExtResource("2_mksxp")
+script = ExtResource("1_vywtc")
+texture = ExtResource("2_ujw5j")
 name = "هویج"
 letters = Array[int]([1607, 1608, 1740, 1580])

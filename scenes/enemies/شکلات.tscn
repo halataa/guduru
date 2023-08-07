@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scenes/templates/object_template.gd" id="1_hegrs"]
+[ext_resource type="Script" path="res://scripts/object_resource.gd" id="2_vqsrt"]
+[ext_resource type="Texture2D" path="res://graphics/new_objects/شکلات.png" id="3_so51e"]
+[ext_resource type="Texture2D" path="res://graphics/border.png" id="4_bbt6r"]
+
+[sub_resource type="Resource" id="Resource_tlrle"]
+script = ExtResource("2_vqsrt")
+texture = ExtResource("3_so51e")
+name = "شکلات"
+letters = Array[int]([1588, 1705, 1604, 1575, 1578])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtba3"]
+size = Vector2(96, 96)
+
+[node name="object_template" type="Area2D"]
+position = Vector2(416, 553)
+collision_layer = 6
+collision_mask = 7
+script = ExtResource("1_hegrs")
+meta = SubResource("Resource_tlrle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+shape = SubResource("RectangleShape2D_jtba3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, 3)
+scale = Vector2(3, 3)
+texture = ExtResource("3_so51e")
+
+[node name="Border" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_bbt6r")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered" flags=18]

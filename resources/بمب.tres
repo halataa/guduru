@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="enemy_object_resource" load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://scripts/object_resource.gd" id="1_0xy5r"]
-[ext_resource type="Texture2D" path="res://graphics/new_objects/بمب.png" id="2_dej1t"]
+[ext_resource type="Script" path="res://scripts/object_resource.gd" id="1_i4rrf"]
+[ext_resource type="Texture2D" path="res://graphics/new_objects/بمب.png" id="2_3t6d6"]
 
 [resource]
-script = ExtResource("1_0xy5r")
-texture = ExtResource("2_dej1t")
+script = ExtResource("1_i4rrf")
+texture = ExtResource("2_3t6d6")
 name = "بمب"
 letters = Array[int]([1576, 1605, 1576])

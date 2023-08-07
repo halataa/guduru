@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wdx4tihrjm4r"
-path="res://.godot/imported/قارچ.png-a94d7b397d99f8657d5ef1a3a10b965a.ctex"
+uid="uid://fs84cxqg6oro"
+path="res://.godot/imported/قارچ.png-4754ea60e89e8e8f65dedb28da2e7d9e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/new_objects/قارچ.png"
-dest_files=["res://.godot/imported/قارچ.png-a94d7b397d99f8657d5ef1a3a10b965a.ctex"]
+source_file="res://graphics/objects/قارچ.png"
+dest_files=["res://.godot/imported/قارچ.png-4754ea60e89e8e8f65dedb28da2e7d9e.ctex"]
 
 [params]
 

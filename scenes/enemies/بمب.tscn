@@ -1,38 +1,38 @@
 [gd_scene load_steps=7 format=3]
 
-[ext_resource type="Script" path="res://scenes/templates/object_template.gd" id="1_d7ps7"]
-[ext_resource type="Script" path="res://scripts/object_resource.gd" id="2_wtqbl"]
-[ext_resource type="Texture2D" path="res://graphics/new_objects/بمب.png" id="3_cm1fr"]
-[ext_resource type="Texture2D" path="res://graphics/border.png" id="4_1y537"]
+[ext_resource type="Script" path="res://scenes/templates/object_template.gd" id="1_3rtb7"]
+[ext_resource type="Script" path="res://scripts/object_resource.gd" id="2_jh7wq"]
+[ext_resource type="Texture2D" path="res://graphics/new_objects/بمب.png" id="3_g0mxx"]
+[ext_resource type="Texture2D" path="res://graphics/border.png" id="4_36y67"]
 
-[sub_resource type="Resource" id="Resource_qypfs"]
-script = ExtResource("2_wtqbl")
-texture = ExtResource("3_cm1fr")
+[sub_resource type="Resource" id="Resource_3bc5o"]
+script = ExtResource("2_jh7wq")
+texture = ExtResource("3_g0mxx")
 name = "بمب"
 letters = Array[int]([1576, 1605, 1576])
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0sk6a"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obknj"]
 size = Vector2(96, 96)
 
 [node name="object_template" type="Area2D"]
 position = Vector2(416, 553)
 collision_layer = 6
 collision_mask = 7
-script = ExtResource("1_d7ps7")
-meta = SubResource("Resource_qypfs")
+script = ExtResource("1_3rtb7")
+meta = SubResource("Resource_3bc5o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1
-shape = SubResource("RectangleShape2D_0sk6a")
+shape = SubResource("RectangleShape2D_obknj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, 3)
 scale = Vector2(3, 3)
-texture = ExtResource("3_cm1fr")
+texture = ExtResource("3_g0mxx")
 
 [node name="Border" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("4_1y537")
+texture = ExtResource("4_36y67")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered" flags=18]

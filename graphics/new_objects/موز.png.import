@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2568xb32tw2t"
-path="res://.godot/imported/موز.png-6c81848539a8fe61399becbf520884fe.ctex"
+path="res://.godot/imported/موز.png-4d5b7e894ff55bb075540c33e8f352fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/new_objects/موز.png"
-dest_files=["res://.godot/imported/موز.png-6c81848539a8fe61399becbf520884fe.ctex"]
+source_file="res://graphics/objects/موز.png"
+dest_files=["res://.godot/imported/موز.png-4d5b7e894ff55bb075540c33e8f352fd.ctex"]
 
 [params]
 

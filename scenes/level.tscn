@@ -9,13 +9,13 @@
 size = Vector2(536, 99)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h8m2h"]
-size = Vector2(593, 20)
+size = Vector2(709, 14)
 
 [node name="Level" type="Node2D"]
 process_mode = 1
 script = ExtResource("1_0fp5q")
 rand_limit_contain = 0.5
-metadata/_edit_vertical_guides_ = [100.0, 200.0, 300.0, 400.0]
+metadata/_edit_vertical_guides_ = [76.0, 175.0, 275.0, 375.0]
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(0.101961, 0.101961, 0.101961, 1)
@@ -32,31 +32,31 @@ texture = ExtResource("2_8a0ei")
 position = Vector2(0, 80)
 
 [node name="Marker2D" type="Marker2D" parent="AlphabetSpawnLocations"]
-position = Vector2(100, 48)
+position = Vector2(75, 48)
 
 [node name="Marker2D2" type="Marker2D" parent="AlphabetSpawnLocations"]
-position = Vector2(300, 48)
+position = Vector2(275, 48)
 
 [node name="Marker2D3" type="Marker2D" parent="AlphabetSpawnLocations"]
-position = Vector2(200, 48)
+position = Vector2(175, 48)
 
 [node name="Marker2D4" type="Marker2D" parent="AlphabetSpawnLocations"]
-position = Vector2(400, 48)
+position = Vector2(375, 48)
 
 [node name="EnemySpawnLocations" type="Node2D" parent="."]
 position = Vector2(0, 680)
 
 [node name="1" type="Marker2D" parent="EnemySpawnLocations"]
-position = Vector2(100, 48)
+position = Vector2(75, 48)
 
 [node name="2" type="Marker2D" parent="EnemySpawnLocations"]
-position = Vector2(300, 48)
+position = Vector2(275, 48)
 
 [node name="3" type="Marker2D" parent="EnemySpawnLocations"]
-position = Vector2(200, 48)
+position = Vector2(175, 48)
 
 [node name="4" type="Marker2D" parent="EnemySpawnLocations"]
-position = Vector2(400, 48)
+position = Vector2(375, 48)
 
 [node name="EnemyCooldown" type="Timer" parent="."]
 wait_time = 10.0
@@ -65,7 +65,7 @@ autostart = true
 [node name="EndOfScreen" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EndOfScreen"]
-position = Vector2(245, 866)
+position = Vector2(234, 856)
 shape = SubResource("RectangleShape2D_fdakj")
 
 [node name="GameOver" type="Area2D" parent="."]
@@ -74,7 +74,7 @@ collision_layer = 2
 collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameOver"]
-position = Vector2(259.5, 249)
+position = Vector2(201.5, 246)
 shape = SubResource("RectangleShape2D_h8m2h")
 
 [node name="UI" parent="." instance=ExtResource("2_ir7t0")]
