@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="enemy_object_resource" load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://scripts/object_resource.gd" id="1_255gx"]
-[ext_resource type="Texture2D" path="res://graphics/new_objects/دزد.png" id="2_1gdh0"]
+[ext_resource type="Script" path="res://scripts/object_resource.gd" id="1_fir5y"]
+[ext_resource type="Texture2D" path="res://graphics/new_objects/دزد.png" id="2_47qfs"]
 
 [resource]
-script = ExtResource("1_255gx")
-texture = ExtResource("2_1gdh0")
+script = ExtResource("1_fir5y")
+texture = ExtResource("2_47qfs")
 name = "دزد"
 letters = Array[int]([1583, 1586, 1583])

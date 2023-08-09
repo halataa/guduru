@@ -1,38 +1,41 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=8 format=3]
 
-[ext_resource type="Script" path="res://scenes/templates/object_template.gd" id="1_6yxth"]
-[ext_resource type="Script" path="res://scripts/object_resource.gd" id="2_vnem3"]
-[ext_resource type="Texture2D" path="res://graphics/new_objects/پنیر.png" id="3_pb2h5"]
-[ext_resource type="Texture2D" path="res://graphics/border.png" id="4_qyrdy"]
+[ext_resource type="Script" path="res://scenes/templates/object_template.gd" id="1_8jf4w"]
+[ext_resource type="Script" path="res://scripts/object_resource.gd" id="2_7777h"]
+[ext_resource type="Texture2D" path="res://graphics/new_objects/پنیر.png" id="3_ciq86"]
+[ext_resource type="Texture2D" path="res://graphics/border.png" id="4_gcaqy"]
+[ext_resource type="Script" path="res://scenes/templates/Text.gd" id="5_p8lit"]
 
-[sub_resource type="Resource" id="Resource_n1exl"]
-script = ExtResource("2_vnem3")
-texture = ExtResource("3_pb2h5")
+[sub_resource type="Resource" id="Resource_hewc8"]
+script = ExtResource("2_7777h")
+texture = ExtResource("3_ciq86")
 name = "پنیر"
 letters = Array[int]([1662, 1606, 1740, 1585])
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wanh"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iu8uy"]
 size = Vector2(96, 96)
 
 [node name="object_template" type="Area2D"]
-position = Vector2(416, 553)
+position = Vector2(140, 432)
 collision_layer = 6
 collision_mask = 7
-script = ExtResource("1_6yxth")
-meta = SubResource("Resource_n1exl")
+script = ExtResource("1_8jf4w")
+meta = SubResource("Resource_hewc8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1
-shape = SubResource("RectangleShape2D_5wanh")
+shape = SubResource("RectangleShape2D_iu8uy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, 3)
 scale = Vector2(3, 3)
-texture = ExtResource("3_pb2h5")
+texture = ExtResource("3_ciq86")
 
 [node name="Border" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("4_qyrdy")
+texture = ExtResource("4_gcaqy")
+script = ExtResource("5_p8lit")
+font_size = 20
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered" flags=18]

@@ -11,9 +11,9 @@ var window_size = DisplayServer.window_get_size()
 
 func _process(delta):
 	var direction = 0
-	if Input.is_action_just_pressed("right") and !$RightRay.is_colliding():
+	if Input.is_action_just_pressed("right") and !$RightRay.is_colliding() and !Input.is_action_pressed("reveal"):
 		direction = 1
-	elif Input.is_action_just_pressed("left") and !$LeftRay.is_colliding():
+	elif Input.is_action_just_pressed("left") and !$LeftRay.is_colliding() and !Input.is_action_pressed("reveal"):
 		direction = -1
 	move_alphabet(direction)
 	if Input.is_action_pressed("fast"):
@@ -30,8 +30,11 @@ func move_alphabet(direction):
 		position.x = new_position_x
 
 func _on_touch_swiped(direction):
-	move_alphabet(direction.x)
-	if direction == Vector2.DOWN:
+	if direction == Vector2.RIGHT and !$RightRay.is_colliding():
+		move_alphabet(direction.x)
+	elif direction == Vector2.LEFT and !$LeftRay.is_colliding():
+		move_alphabet(direction.x)
+	elif direction == Vector2.DOWN:
 		Input.action_press('fast')
 	
 

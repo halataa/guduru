@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="enemy_object_resource" load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://scripts/object_resource.gd" id="1_eyair"]
-[ext_resource type="Texture2D" path="res://graphics/new_objects/چادر.png" id="2_fdncc"]
+[ext_resource type="Script" path="res://scripts/object_resource.gd" id="1_xtg4k"]
+[ext_resource type="Texture2D" path="res://graphics/new_objects/چادر.png" id="2_h0evh"]
 
 [resource]
-script = ExtResource("1_eyair")
-texture = ExtResource("2_fdncc")
+script = ExtResource("1_xtg4k")
+texture = ExtResource("2_h0evh")
 name = "چادر"
 letters = Array[int]([1670, 1575, 1583, 1585])

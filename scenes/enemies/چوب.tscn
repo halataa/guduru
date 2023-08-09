@@ -1,38 +1,41 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=8 format=3]
 
-[ext_resource type="Script" path="res://scenes/templates/object_template.gd" id="1_avrmj"]
-[ext_resource type="Script" path="res://scripts/object_resource.gd" id="2_d0xhn"]
-[ext_resource type="Texture2D" path="res://graphics/new_objects/چوب.png" id="3_h5lix"]
-[ext_resource type="Texture2D" path="res://graphics/border.png" id="4_fn2n5"]
+[ext_resource type="Script" path="res://scenes/templates/object_template.gd" id="1_52vfs"]
+[ext_resource type="Script" path="res://scripts/object_resource.gd" id="2_7iq11"]
+[ext_resource type="Texture2D" path="res://graphics/new_objects/چوب.png" id="3_8qe36"]
+[ext_resource type="Texture2D" path="res://graphics/border.png" id="4_wnmk5"]
+[ext_resource type="Script" path="res://scenes/templates/Text.gd" id="5_y1l3b"]
 
-[sub_resource type="Resource" id="Resource_550t0"]
-script = ExtResource("2_d0xhn")
-texture = ExtResource("3_h5lix")
+[sub_resource type="Resource" id="Resource_b677o"]
+script = ExtResource("2_7iq11")
+texture = ExtResource("3_8qe36")
 name = "چوب"
 letters = Array[int]([1670, 1608, 1576])
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3eky"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4mmr"]
 size = Vector2(96, 96)
 
 [node name="object_template" type="Area2D"]
-position = Vector2(416, 553)
+position = Vector2(140, 432)
 collision_layer = 6
 collision_mask = 7
-script = ExtResource("1_avrmj")
-meta = SubResource("Resource_550t0")
+script = ExtResource("1_52vfs")
+meta = SubResource("Resource_b677o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1
-shape = SubResource("RectangleShape2D_s3eky")
+shape = SubResource("RectangleShape2D_c4mmr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, 3)
 scale = Vector2(3, 3)
-texture = ExtResource("3_h5lix")
+texture = ExtResource("3_8qe36")
 
 [node name="Border" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("4_fn2n5")
+texture = ExtResource("4_wnmk5")
+script = ExtResource("5_y1l3b")
+font_size = 20
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered" flags=18]

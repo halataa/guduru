@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://h8wbaxoipya3"
-path="res://.godot/imported/نامه.png-94eb3dd1e18a0a5268098f3ef6fa8658.ctex"
+path="res://.godot/imported/نامه.png-766ade52859535a1028087a48167fdd7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/objects/نامه.png"
-dest_files=["res://.godot/imported/نامه.png-94eb3dd1e18a0a5268098f3ef6fa8658.ctex"]
+source_file="res://graphics/new_objects/نامه.png"
+dest_files=["res://.godot/imported/نامه.png-766ade52859535a1028087a48167fdd7.ctex"]
 
 [params]
 

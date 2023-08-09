@@ -20,7 +20,6 @@ func get_ready():
 
 
 
-
 func _on_body_entered(body):
 	if body.is_contain:
 		if body.ord_num in meta.letters:

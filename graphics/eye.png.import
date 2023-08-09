@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw1vo4lckjjjm"
-path="res://.godot/imported/لیمو.png-98449c85c0c892c422fa0e02282a83fd.ctex"
+uid="uid://3mmdqsbu4t52"
+path="res://.godot/imported/eye.png-007fbb9fe9c718e393245938ac880bf2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/new_objects/لیمو.png"
-dest_files=["res://.godot/imported/لیمو.png-98449c85c0c892c422fa0e02282a83fd.ctex"]
+source_file="res://graphics/eye.png"
+dest_files=["res://.godot/imported/eye.png-007fbb9fe9c718e393245938ac880bf2.ctex"]
 
 [params]
 

@@ -36,7 +36,15 @@ func _ready():
 
 	
 func _process(_delta):
-	pass
+	var enemies = $Enemies.get_children()
+	if Input.is_action_pressed("reveal"):
+		for e in enemies:
+			e.find_child("Border").show()
+			e.find_child("Sprite2D").hide()
+	else:
+		for e in enemies:
+			e.find_child("Border").hide()
+			e.find_child("Sprite2D").show()
 		
 	
 func add_random_alphabet(enemies:Array=[]):
@@ -111,7 +119,6 @@ func get_4_enemies():
 		if c:
 			c.sort_custom(sort_y)
 			e4.append(c[-1])
-	Util.active_enemies = e4
 	return e4
 
 
@@ -127,6 +134,8 @@ func sort_y(a,b):
 func _on_alphabet_child_exiting_tree(_node):
 	Input.action_release("fast")
 	var enemies = get_4_enemies()
+	if $Enemies.get_children() == []:
+		enemies = add_enemy_row()
 	add_random_alphabet(enemies)
 
 
@@ -140,8 +149,9 @@ func _on_wrong_move(pos):
 	add_random_enemy(Vector2(pos.x,pos.y-100))
 
 func _on_right_move():
-	Util.score += 1
-	$UI.update_score()
+	if !Util.game_over:
+		Util.score += 1
+		$UI.update_score()
 
 
 func _on_end_of_screen_body_entered(body):
@@ -151,5 +161,13 @@ func _on_end_of_screen_body_entered(body):
 
 
 func _on_game_over_area_shape_entered(_area_rid, _area, _area_shape_index, _local_shape_index):
+	Util.game_over = true
+	if Util.score > Util.high_score:
+		Util.save_data()
+		Util.high_score = Util.score
+		$Gameover.find_child("Highscore").text = "رکورد جدید: " + str(Util.high_score)
+	else:
+		$Gameover.find_child("Highscore").text = "بیشترین امتیاز: " + str(Util.high_score)
+	$Gameover.find_child("Score").text = "امتیاز شما: " + str(Util.score)
 	$Gameover.show()
 	

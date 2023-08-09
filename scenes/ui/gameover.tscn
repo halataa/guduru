@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cds5gfren3o1o"]
+[gd_scene load_steps=7 format=3 uid="uid://cds5gfren3o1o"]
 
 [ext_resource type="FontFile" uid="uid://ch8btagj4yg4d" path="res://graphics/AnjomanMaxFN-Regular.ttf" id="1_ne2t4"]
 [ext_resource type="Script" path="res://scenes/ui/gameover.gd" id="1_ydfdo"]
@@ -11,6 +11,18 @@ font_color = Color(0, 0, 0, 1)
 outline_size = 3
 outline_color = Color(1, 0, 0, 1)
 shadow_size = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_4v5es"]
+font = ExtResource("1_ne2t4")
+font_size = 26
+font_color = Color(0.0196078, 0, 0.54902, 1)
+outline_size = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_70gef"]
+font = ExtResource("1_ne2t4")
+font_size = 26
+font_color = Color(0.372549, 0.027451, 0.560784, 1)
+outline_size = 1
 
 [node name="Gameover" type="CanvasLayer"]
 script = ExtResource("1_ydfdo")
@@ -51,6 +63,36 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_uje72")
 text = "شروع مجدد"
+metadata/_edit_use_anchors_ = true
+
+[node name="Score" type="Label" parent="."]
+anchors_preset = -1
+anchor_top = 0.64
+anchor_right = 1.0
+anchor_bottom = 0.739
+offset_top = -6.10352e-05
+offset_bottom = -0.200012
+grow_horizontal = 2
+grow_vertical = 2
+text = "امتیاز شما"
+label_settings = SubResource("LabelSettings_4v5es")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Highscore" type="Label" parent="."]
+anchors_preset = -1
+anchor_top = 0.745
+anchor_right = 1.0
+anchor_bottom = 0.844
+offset_top = -6.10352e-05
+offset_bottom = -0.200012
+grow_horizontal = 2
+grow_vertical = 2
+text = "بیشترین امتیاز"
+label_settings = SubResource("LabelSettings_70gef")
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

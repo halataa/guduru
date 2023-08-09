@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="enemy_object_resource" load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://scripts/object_resource.gd" id="1_je2mw"]
-[ext_resource type="Texture2D" path="res://graphics/new_objects/لاکپشت.png" id="2_a73tl"]
+[ext_resource type="Script" path="res://scripts/object_resource.gd" id="1_v4u2d"]
+[ext_resource type="Texture2D" path="res://graphics/new_objects/لاکپشت.png" id="2_bhn87"]
 
 [resource]
-script = ExtResource("1_je2mw")
-texture = ExtResource("2_a73tl")
+script = ExtResource("1_v4u2d")
+texture = ExtResource("2_bhn87")
 name = "لاکپشت"
 letters = Array[int]([1604, 1575, 1705, 1662, 1588, 1578])
