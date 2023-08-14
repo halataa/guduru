@@ -19,12 +19,12 @@ texture_filter = 1
 
 [node name="LeftRay" type="RayCast2D" parent="."]
 target_position = Vector2(-86, 47)
-collision_mask = 4
+collision_mask = 20
 collide_with_areas = true
 
 [node name="RightRay" type="RayCast2D" parent="."]
 target_position = Vector2(85, 50)
-collision_mask = 4
+collision_mask = 20
 collide_with_areas = true
 
 [connection signal="swiped" from="Touch" to="." method="_on_touch_swiped"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://qm5ypjmka0mn"]
+[gd_scene load_steps=8 format=3 uid="uid://qm5ypjmka0mn"]
 
 [ext_resource type="Script" path="res://scenes/level.gd" id="1_0fp5q"]
 [ext_resource type="Texture2D" uid="uid://ch53sq6c51rt" path="res://graphics/white.png" id="2_8a0ei"]
@@ -11,6 +11,9 @@ size = Vector2(1619, 99)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h8m2h"]
 size = Vector2(1176, 21)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mbo7t"]
+size = Vector2(53.125, 830)
+
 [node name="Level" type="Node2D"]
 process_mode = 1
 script = ExtResource("1_0fp5q")
@@ -18,7 +21,7 @@ metadata/_edit_vertical_guides_ = [76.0, 175.0, 275.0, 375.0]
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(0.101961, 0.101961, 0.101961, 1)
-position = Vector2(590, 14)
+position = Vector2(593, 78)
 rotation = 3.14159
 scale = Vector2(4.13254, -8.40497)
 texture = ExtResource("2_8a0ei")
@@ -76,9 +79,22 @@ collision_mask = 6
 position = Vector2(224, 249.5)
 shape = SubResource("RectangleShape2D_h8m2h")
 
+[node name="Edges" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="LeftEdge" type="CollisionShape2D" parent="Edges"]
+position = Vector2(-10, 416)
+shape = SubResource("RectangleShape2D_mbo7t")
+
+[node name="RightEdge" type="CollisionShape2D" parent="Edges"]
+position = Vector2(457, 408)
+shape = SubResource("RectangleShape2D_mbo7t")
+
 [node name="UI" parent="." instance=ExtResource("2_ir7t0")]
 
 [node name="Gameover" parent="." instance=ExtResource("4_2hcnw")]
+process_mode = 3
 visible = false
 
 [connection signal="child_exiting_tree" from="Alphabet" to="." method="_on_alphabet_child_exiting_tree"]

@@ -161,6 +161,7 @@ func _on_end_of_screen_body_entered(body):
 
 
 func _on_game_over_area_shape_entered(_area_rid, _area, _area_shape_index, _local_shape_index):
+	get_tree().paused = true
 	Util.game_over = true
 	if Util.score > Util.high_score:
 		Util.save_data()
