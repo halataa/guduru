@@ -68,6 +68,24 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_l7o1i")
 region_rect = Rect2(0, 0, 702.718, 522.461)
 
+[node name="ScreenSize" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 0.394
+offset_left = 50.0
+offset_top = 151.0
+offset_right = -32.0
+offset_bottom = -99.2
+
+[node name="WindowSize" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 0.394
+offset_left = 51.0
+offset_top = 215.0
+offset_right = -31.0
+offset_bottom = -35.2
+
 [connection signal="pressed" from="PauseBottun" to="." method="_on_pause_bottun_pressed"]
 [connection signal="button_down" from="Eye" to="." method="_on_eye_button_down"]
 [connection signal="button_up" from="Eye" to="." method="_on_eye_button_up"]
