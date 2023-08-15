@@ -3,11 +3,6 @@ extends CanvasLayer
 
 @onready var score = $Score
 
-
-
-func _process(delta):
-	$ScreenSize.text = str(DisplayServer.screen_get_size())
-	$WindowSize.text = str(DisplayServer.window_get_size())
 	
 	
 func update_score():
