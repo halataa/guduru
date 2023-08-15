@@ -28,9 +28,9 @@ func dir_contents(path):
 	return pngs
 
 func _ready():
-	$EndOfScreen/End.position.y = screen_size.y
-	$GameOver/GameoverHeight.position.y = int(screen_size.y / 3.7)
-	$EnemySpawnLocations.global_position.y = screen_size.y * 0.9
+#	$EndOfScreen/End.global_position.y = screen_size.y * 1.2
+#	$GameOver/GameoverHeight.position.y = int(screen_size.y / 3.7)
+#	$EnemySpawnLocations.global_position.y = screen_size.y
 	$Gameover.visible = false
 	$UI.update_score()
 	Util.right_move.connect(_on_right_move)

@@ -23,7 +23,10 @@ Util="*res://util.gd"
 
 window/size/viewport_width=450
 window/size/viewport_height=800
+window/size/window_width_override=405
+window/size/window_height_override=900
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 window/handheld/orientation=1
 
 [gui]
