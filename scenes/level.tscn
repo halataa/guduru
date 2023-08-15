@@ -12,7 +12,7 @@ size = Vector2(1619, 99)
 size = Vector2(1176, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mbo7t"]
-size = Vector2(53.125, 830)
+size = Vector2(53.125, 1250.5)
 
 [node name="Level" type="Node2D"]
 process_mode = 1
@@ -66,7 +66,7 @@ autostart = true
 
 [node name="EndOfScreen" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EndOfScreen"]
+[node name="End" type="CollisionShape2D" parent="EndOfScreen"]
 position = Vector2(309.5, 853)
 shape = SubResource("RectangleShape2D_fdakj")
 
@@ -75,7 +75,7 @@ position = Vector2(0, 2)
 collision_layer = 2
 collision_mask = 6
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GameOver"]
+[node name="GameoverHeight" type="CollisionShape2D" parent="GameOver"]
 position = Vector2(224, 249.5)
 shape = SubResource("RectangleShape2D_h8m2h")
 
@@ -84,14 +84,15 @@ collision_layer = 16
 collision_mask = 0
 
 [node name="LeftEdge" type="CollisionShape2D" parent="Edges"]
-position = Vector2(-10, 416)
+position = Vector2(-10, 502.75)
 shape = SubResource("RectangleShape2D_mbo7t")
 
 [node name="RightEdge" type="CollisionShape2D" parent="Edges"]
-position = Vector2(457, 408)
+position = Vector2(457, 531.5)
 shape = SubResource("RectangleShape2D_mbo7t")
 
 [node name="UI" parent="." instance=ExtResource("2_ir7t0")]
+metadata/_edit_horizontal_guides_ = [36.0]
 
 [node name="Gameover" parent="." instance=ExtResource("4_2hcnw")]
 process_mode = 3

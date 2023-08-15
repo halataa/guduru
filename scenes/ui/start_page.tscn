@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bj725htjgyawl"]
+[gd_scene load_steps=6 format=3 uid="uid://bj725htjgyawl"]
 
 [ext_resource type="Script" path="res://scenes/ui/start_page.gd" id="1_205mf"]
 [ext_resource type="FontFile" uid="uid://ch8btagj4yg4d" path="res://graphics/AnjomanMaxFN-Regular.ttf" id="1_ebi6k"]
@@ -11,6 +11,9 @@ font_color = Color(0, 0, 0.117647, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_0k34t"]
 font = ExtResource("1_ebi6k")
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_aq6bx"]
+default_font = ExtResource("1_ebi6k")
 
 [node name="StartPage" type="Control"]
 layout_mode = 3
@@ -70,5 +73,41 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -88.0
+offset_right = 128.0
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.933333, 0.690196, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = 11.0
+offset_right = -11.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_aq6bx")
+text = " راهنما:
+حروفی که از بالای صفحه به پایین میان رو به جسمی در املاش، حرف مورد نظر وجود داره برسون تا امتیاز بگیری، یادت باشه که اگر حرفی که در حال فروده مرز قرمز رنگی داره بازی برعکسه و باید به جسمی بره که اون حرف رو در املاش نداره برسه!
+برای حرکت به چپ  راست روی صفحه بکش و برای حرکت سریع به سمت پایین بکش
+
+"
+text_direction = 2
+language = "fa_IR"
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
