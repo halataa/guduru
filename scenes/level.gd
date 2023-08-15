@@ -30,7 +30,7 @@ func dir_contents(path):
 func _ready():
 	$EndOfScreen/End.position.y = screen_size.y
 	$GameOver/GameoverHeight.position.y = int(screen_size.y / 3.7)
-	$EnemySpawnLocations.position.y = screen_size.y * 0.9
+	$EnemySpawnLocations.global_position.y = screen_size.y * 0.9
 	$Gameover.visible = false
 	$UI.update_score()
 	Util.right_move.connect(_on_right_move)

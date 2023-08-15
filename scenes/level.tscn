@@ -21,9 +21,9 @@ metadata/_edit_vertical_guides_ = [76.0, 175.0, 275.0, 375.0]
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(0.101961, 0.101961, 0.101961, 1)
-position = Vector2(221.928, 331.785)
+position = Vector2(243.334, 463.717)
 rotation = 3.14159
-scale = Vector2(1.16758, -1.1864)
+scale = Vector2(2.45985, -2.62219)
 texture = ExtResource("2_8a0ei")
 
 [node name="Alphabet" type="Node2D" parent="."]
