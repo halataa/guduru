@@ -62,7 +62,10 @@ offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_uje72")
-text = "شروع مجدد"
+text = "دوباره"
+icon_alignment = 1
+expand_icon = true
+language = "fa_IR"
 metadata/_edit_use_anchors_ = true
 
 [node name="Score" type="Label" parent="."]

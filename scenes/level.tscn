@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://qm5ypjmka0mn"]
+[gd_scene load_steps=9 format=3 uid="uid://qm5ypjmka0mn"]
 
 [ext_resource type="Script" path="res://scenes/level.gd" id="1_0fp5q"]
 [ext_resource type="Texture2D" uid="uid://ch53sq6c51rt" path="res://graphics/white.png" id="2_8a0ei"]
 [ext_resource type="PackedScene" uid="uid://buqvkbl78bj0t" path="res://scenes/ui/ui.tscn" id="2_ir7t0"]
+[ext_resource type="Script" path="res://scenes/GameOver.gd" id="3_kfbue"]
 [ext_resource type="PackedScene" uid="uid://cds5gfren3o1o" path="res://scenes/ui/gameover.tscn" id="4_2hcnw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fdakj"]
@@ -25,8 +26,6 @@ position = Vector2(243.334, 463.717)
 rotation = 3.14159
 scale = Vector2(2.45985, -2.62219)
 texture = ExtResource("2_8a0ei")
-
-[node name="Alphabet" type="Node2D" parent="."]
 
 [node name="Enemies" type="Node" parent="."]
 
@@ -74,6 +73,7 @@ shape = SubResource("RectangleShape2D_fdakj")
 position = Vector2(0, 2)
 collision_layer = 2
 collision_mask = 6
+script = ExtResource("3_kfbue")
 
 [node name="GameoverHeight" type="CollisionShape2D" parent="GameOver"]
 position = Vector2(224, 249.5)
@@ -91,6 +91,8 @@ shape = SubResource("RectangleShape2D_mbo7t")
 position = Vector2(457, 531.5)
 shape = SubResource("RectangleShape2D_mbo7t")
 
+[node name="Alphabet" type="Node2D" parent="."]
+
 [node name="UI" parent="." instance=ExtResource("2_ir7t0")]
 metadata/_edit_horizontal_guides_ = [36.0]
 
@@ -98,7 +100,7 @@ metadata/_edit_horizontal_guides_ = [36.0]
 process_mode = 3
 visible = false
 
-[connection signal="child_exiting_tree" from="Alphabet" to="." method="_on_alphabet_child_exiting_tree"]
 [connection signal="timeout" from="EnemyCooldown" to="." method="_on_enemy_cooldown_timeout"]
 [connection signal="body_entered" from="EndOfScreen" to="." method="_on_end_of_screen_body_entered"]
 [connection signal="area_shape_entered" from="GameOver" to="." method="_on_game_over_area_shape_entered"]
+[connection signal="child_exiting_tree" from="Alphabet" to="." method="_on_alphabet_child_exiting_tree"]
