@@ -6,8 +6,13 @@ extends Node2D
 @onready var ascenes = dir_contents(alphabet_scene_path)
 @onready var escenes = dir_contents(enemy_scene_path)
 @onready var gameover = preload("res://scenes/ui/gameover.tscn")
-@onready var screen_size = DisplayServer.window_get_size()
 @export var rand_limit_contain:float = 0.8
+
+func height_offset():
+	var vp = get_viewport().get_visible_rect().size
+	return vp.y - 800
+
+
 
 func dir_contents(path):
 	var pngs = []
@@ -28,9 +33,8 @@ func dir_contents(path):
 	return pngs
 
 func _ready():
-#	$EndOfScreen/End.global_position.y = screen_size.y * 1.2
-#	$GameOver/GameoverHeight.position.y = int(screen_size.y / 3.7)
-#	$EnemySpawnLocations.global_position.y = screen_size.y
+	$EndOfScreen/End.global_position.y += height_offset()
+	$EnemySpawnLocations.global_position.y += height_offset()
 	$Gameover.visible = false
 	$UI.update_score()
 	Util.right_move.connect(_on_right_move)
